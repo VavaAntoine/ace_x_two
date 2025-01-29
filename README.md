@@ -95,6 +95,8 @@ Follow these steps to run the ACE X TWO application:
 
 Once the application is running, you can access the API endpoints and interact with the system.
 
+---
+
 ## 🔍 Interactive API Documentation with Swagger UI
 
 The application provides **Swagger UI** for interactive API documentation and testing. You can access it by navigating to the following URL in your browser: `http://localhost:<PORT>/swagger-ui/index.html`
@@ -103,4 +105,34 @@ The application provides **Swagger UI** for interactive API documentation and te
   - Explore all available API endpoints.
   - Test endpoints with real requests and responses.
   - View detailed documentation for each endpoint, including request/response formats and constraints.
+
+## 🔍 Alternative API Interaction with Postman
+
+For those who prefer using **Postman** for API interaction, an exported Postman collection is provided. This collection contains all the necessary API endpoints and configurations for testing the **Ace X Two (1X2)** application.
+
+### Steps to Use the Postman Collection:
+
+1. **Locate the Collection**:
+   - The Postman collection file is located at:
+     ```
+     ...\acextwo\AceXTwo.postman_collection.json
+     ```
+
+2. **Import the Collection into Postman**:
+   - Open **Postman**.
+   - Click on the **Import** button in the top-left corner.
+   - Select the `AceXTwo.postman_collection.json` file from the specified location.
+   - Click **Import** to add the collection to your Postman workspace.
+
+3. **Configure the Environment**:
+   - Ensure your Spring Boot application is running.
+   - Set the base URL in Postman to match your application's server address (e.g., `http://localhost:8080`).
+
+4. **Interact with the API**:
+   - Use the imported collection to:
+     - Test all available API endpoints.
+     - Send requests and view responses.
+     - Validate the functionality of the **Ace X Two (1X2)** application.
+
+This Postman collection provides a convenient and powerful way to explore and test the API without using Swagger UI.
 
