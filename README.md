@@ -1,6 +1,6 @@
 # ⚽ ACE X TWO (1X2) Application 
 
-**ACEXTWO** is a RESTful API designed to manage sports matches and their associated betting odds. It provides a comprehensive set of features for creating, updating, retrieving, and deleting match data while enforcing constraints on match uniqueness and valid odd values.
+**ACE X TWO** is a RESTful API designed to manage sports matches and their associated betting odds. It provides a comprehensive set of features for creating, updating, retrieving, and deleting match data while enforcing constraints on match uniqueness and valid odd values.
 
 ---
 
