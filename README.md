@@ -1,4 +1,4 @@
-# ⚽ ACEXTWO (1X2) Application 
+# ⚽ ACE X TWO (1X2) Application 
 
 **ACEXTWO** is a RESTful API designed to manage sports matches and their associated betting odds. It provides a comprehensive set of features for creating, updating, retrieving, and deleting match data while enforcing constraints on match uniqueness and valid odd values.
 
@@ -50,12 +50,26 @@
 
 ## 📂 Database Setup
 
-### 1️⃣ Set Up PostgreSQL Server
-1. Launch **pgAdmin 4 v8** ([Download Here](https://www.pgadmin.org/download/pgadmin-4-windows/)).
-2. Connect to **PostgreSQL 17** using the password set during installation.
-3. Create a new database and execute the SQL script located at `...\acextwo\acextwo.sql`:
-   ```bash
-   psql -U postgres -d suite_of_sports_db -f path/to/acextwo.sql
+1. **Launch pgAdmin 4 v8**:
+   - Open pgAdmin 4 v8 from your applications or desktop.
+
+2. **Connect to PostgreSQL Server**:
+   - In the **Browser** panel, expand **Servers**.
+   - Right-click on **PostgreSQL 17** and select **Connect Server**.
+   - Enter the password you set during PostgreSQL installation.
+
+3. **Create a New Database**:
+   - Right-click on **Databases** in the **Browser** panel.
+   - Select **Create > Database**.
+   - In the **Create Database** dialog:
+     - **Database**: `suite_of_sports_db`
+     - Click **Save** to create the database.
+
+4. **Execute the SQL Script**:
+   - Expand the newly created `suite_of_sports_db` database in the **Browser** panel.
+   - Right-click on `suite_of_sports_db` and select **Query Tool**.
+   - Open the SQL script located at `...\acextwo\acextwo.sql`.
+   - Execute the script to set up the **Ace X Two (1X2)** schema in your PostgreSQL database.
 
 ## 🏃 Running the Application
 
@@ -89,7 +103,7 @@ The application provides **Swagger UI** for interactive API documentation and te
   - Explore all available API endpoints.
   - Test endpoints with real requests and responses.
   - View detailed documentation for each endpoint, including request/response formats and constraints.
-  - 
+    
 ## 🌐 API Endpoints
 
 ### Match Management
