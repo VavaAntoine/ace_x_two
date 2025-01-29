@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "a0e6eeec-d8d4-4b11-b9ba-d7ee7a03eb87",
+		"name": "AceXTwo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18603562"
+	},
+	"item": [
+		{
+			"name": "matches",
+			"item": [
+				{
+					"name": "CreateMatch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"PAOK vs ARIS \",\r\n  \"matchDate\": \"2028-06-15\",\r\n  \"matchTime\": \"15:45:00\",\r\n  \"teamA\": \"PAOK\",\r\n  \"teamB\": \"ARIS\",\r\n  \"sport\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMatches",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"description\": \"AEK vs ARHS \",\r\n    \"matchDate\": \"2026-05-15\",\r\n    \"matchTime\": \"15:45:00\",\r\n    \"teamA\": \"AEK\",\r\n    \"teamB\": \"ARHS\",\r\n    \"sport\": \"Basketball\"\r\n    },\r\n   {\r\n    \"description\": \"AEK vs ARHS \",\r\n    \"matchDate\": \"2026-05-15\",\r\n    \"matchTime\": \"15:45:00\",\r\n    \"teamA\": \"AEK\",\r\n    \"teamB\": \"ARHS\",\r\n    \"sport\": \"Football\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMatchesWithOdds",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Real vs Barca\",\r\n  \"matchDate\": \"2025-05-15\",\r\n  \"matchTime\": \"15:30:00\",\r\n  \"teamA\": \"Real\",\r\n  \"teamB\": \"Barca\",\r\n  \"sport\": 1,\r\n  \"matchOdds\": [\r\n    {\r\n      \"specifier\": \"1\",\r\n      \"odd\": 2.2\r\n    },\r\n    {\r\n      \"specifier\": \"X\",\r\n      \"odd\": 3.5\r\n    },\r\n    {\r\n      \"specifier\": \"2\",\r\n      \"odd\": 2.8\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/with-odds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"with-odds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadAllMatches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadMatchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMatch",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"PAO AKTOR VS OLY PEIRAIKH\",\r\n  \"matchDate\": \"2033-05-15\",\r\n  \"matchTime\": \"15:30:00\",\r\n  \"teamA\": \"PAO ATH\",\r\n  \"teamB\": \"OLY PEIR\",\r\n  \"sport\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMatch",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"PAO AKTOR VS OLY PEIRAIKH\",\r\n  \"matchDate\": \"2033-05-15\",\r\n  \"matchTime\": \"15:30:00\",\r\n  \"teamA\": \"PAO ATH\",\r\n  \"teamB\": \"OLY PEIR\",\r\n  \"sport\": 1,\r\n  \"matchOdds\": [\r\n    {\r\n      \"specifier\": \"1\",\r\n      \"odd\": 2.23\r\n    },\r\n    {\r\n      \"specifier\": \"X\",\r\n      \"odd\": 3.53\r\n    },\r\n    {\r\n      \"specifier\": \"2\",\r\n      \"odd\": 2.83\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "matchOdds",
+			"item": [
+				{
+					"name": "CreateOdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"specifier\": \"X\", \"odd\": 3.99 }\r\n \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/51/odds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"51",
+								"odds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateOdds",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    { \"specifier\": \"1\", \"odd\": 1.50 },\r\n    { \"specifier\": \"X\", \"odd\": 3.40 },\r\n    { \"specifier\": \"2\", \"odd\": 2.80 }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/102/odds/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"102",
+								"odds",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMatchOddsByMatchId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/51/odds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"51",
+								"odds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMatchOddById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/51/odds/201",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"51",
+								"odds",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOdd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"odd\": 18 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/51/odds/201",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"51",
+								"odds",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOddById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/matches/51/odds/151",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"matches",
+								"51",
+								"odds",
+								"151"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
